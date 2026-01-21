@@ -1,15 +1,15 @@
-*.class
-*.swp
-*.swo
-build/
-build.xml
-nbbuild.xml
-manifest.mf
-nbproject/
-/bin/
-/dist/
-/test/
-.classpath
-.project
-.settings/
-.gradle/
+# Maven
+**/target/
+
+# IntelliJ / IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
