@@ -24,17 +24,7 @@ The documentation is also available in a [compiled format](https://CWTSLeiden.gi
 ### Maven
 
 ```
-<dependency>
-    <groupId>nl.cwts</groupId>
-    <artifactId>networkanalysis</artifactId>
-    <version>1.3.0</version>
-</dependency>
-```
 
-### Gradle
-
-```
-implementation group: 'nl.cwts', name: 'networkanalysis', version: '1.3.0'
 ```
 
 ## Usage
@@ -47,7 +37,7 @@ To run the clustering algorithms, the command-line tool `RunNetworkClustering` i
 The tool can be run as follows:
 
 ```
-java -cp leiden-cluster-1.3.0.jar run.com.codemutation.leiden.RunNetworkClustering
+java -cp leiden-cluster-1.3.0.jar com.codemutation.leiden.run.RunNetworkClustering
 ```
 
 If no further arguments are provided, the following usage notice will be displayed:
@@ -111,7 +101,7 @@ To run the layout algorithm, the command-line tool `RunNetworkLayout` is provide
 The tool can be run as follows:
 
 ```
-java -cp leiden-cluster-1.3.0.jar run.com.codemutation.leiden.RunNetworkLayout
+java -cp leiden-cluster-1.3.0.jar com.codemutation.leiden.run.RunNetworkLayout
 ```
 
 If no further arguments are provided, the following usage notice will be displayed:
@@ -210,7 +200,7 @@ Nodes must be represented by integer numbers starting from 0.
 Assuming that the edge list has been saved in the file `network.txt`, the `RunNetworkClustering` tool can be run as follows:
 
 ```
-java -cp leiden-cluster-1.3.0.jar run.com.codemutation.leiden.RunNetworkClustering -r 0.2 -o clusters.txt network.txt
+java -cp leiden-cluster-1.3.0.jar com.codemutation.leiden.run.RunNetworkClustering -r 0.2 -o clusters.txt network.txt
 ```
 
 In this case, clusters are identified using the Leiden algorithm.
@@ -235,7 +225,7 @@ Cluster 1 includes nodes 3, 4, and 5.
 The `RunNetworkLayout` tool can be run as follows:
 
 ```
-java -cp leiden-cluster-1.3.0.jar run.com.codemutation.leiden.RunNetworkLayout -o layout.txt network.txt
+java -cp leiden-cluster-1.3.0.jar com.codemutation.leiden.run.RunNetworkLayout -o layout.txt network.txt
 ```
 
 In this case, the default parameter values are used for the VOS layout technique.
@@ -299,13 +289,13 @@ There are two `main` methods, one in the class `run.com.codemutation.leiden.RunN
 After compiling the source code, the `RunNetworkClustering` tool can be run as follows:
 
 ```
-java -cp build/libs/leiden-cluster-<version>.jar run.com.codemutation.leiden.RunNetworkClustering
+java -cp build/libs/leiden-cluster-<version>.jar com.codemutation.leiden.run.RunNetworkClustering
 ```
 
 The `RunNetworkLayout` tool can be run as follows:
 
 ```
-java -cp build/libs/leiden-cluster-<version>.jar run.com.codemutation.leiden.RunNetworkLayout
+java -cp build/libs/leiden-cluster-<version>.jar com.codemutation.leiden.run.RunNetworkLayout
 ```
 
 ## References
