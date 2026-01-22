@@ -4,7 +4,6 @@
 [![License: MIT](https://badgen.net/github/license/CWTSLeiden/networkanalysis?label=License&color=yellow)](https://github.com/CWTSLeiden/networkanalysis/blob/master/LICENSE)
 [![Latest release](https://badgen.net/github/release/CWTSLeiden/networkanalysis?label=Release)](https://github.com/CWTSLeiden/networkanalysis/releases)
 [![Maven Central version](https://badgen.net/maven/v/maven-central/nl.cwts/networkanalysis)](https://central.sonatype.com/artifact/nl.cwts/networkanalysis)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1466830.svg)](https://doi.org/10.5281/zenodo.1466830)
 
 ## Introduction
 
@@ -48,7 +47,7 @@ To run the clustering algorithms, the command-line tool `RunNetworkClustering` i
 The tool can be run as follows:
 
 ```
-java -cp networkanalysis-1.3.0.jar nl.cwts.networkanalysis.run.RunNetworkClustering
+java -cp networkanalysis-1.3.0.jar run.com.codemutation.leiden.RunNetworkClustering
 ```
 
 If no further arguments are provided, the following usage notice will be displayed:
@@ -112,7 +111,7 @@ To run the layout algorithm, the command-line tool `RunNetworkLayout` is provide
 The tool can be run as follows:
 
 ```
-java -cp networkanalysis-1.3.0.jar nl.cwts.networkanalysis.run.RunNetworkLayout
+java -cp networkanalysis-1.3.0.jar run.com.codemutation.leiden.RunNetworkLayout
 ```
 
 If no further arguments are provided, the following usage notice will be displayed:
@@ -211,7 +210,7 @@ Nodes must be represented by integer numbers starting from 0.
 Assuming that the edge list has been saved in the file `network.txt`, the `RunNetworkClustering` tool can be run as follows:
 
 ```
-java -cp networkanalysis-1.3.0.jar nl.cwts.networkanalysis.run.RunNetworkClustering -r 0.2 -o clusters.txt network.txt
+java -cp networkanalysis-1.3.0.jar run.com.codemutation.leiden.RunNetworkClustering -r 0.2 -o clusters.txt network.txt
 ```
 
 In this case, clusters are identified using the Leiden algorithm.
@@ -236,7 +235,7 @@ Cluster 1 includes nodes 3, 4, and 5.
 The `RunNetworkLayout` tool can be run as follows:
 
 ```
-java -cp networkanalysis-1.3.0.jar nl.cwts.networkanalysis.run.RunNetworkLayout -o layout.txt network.txt
+java -cp networkanalysis-1.3.0.jar run.com.codemutation.leiden.RunNetworkLayout -o layout.txt network.txt
 ```
 
 In this case, the default parameter values are used for the VOS layout technique.
@@ -296,17 +295,17 @@ The compiled `class` files will be output to the directory `build/classes`.
 The compiled `jar` file will be output to the directory `build/libs`.
 The compiled `javadoc` files will be output to the directory `build/docs`.
 
-There are two `main` methods, one in the class `nl.cwts.networkanalysis.run.RunNetworkClustering` and one in the class `nl.cwts.networkanalysis.run.RunNetworkLayout`.
+There are two `main` methods, one in the class `run.com.codemutation.leiden.RunNetworkClustering` and one in the class `run.com.codemutation.leiden.RunNetworkLayout`.
 After compiling the source code, the `RunNetworkClustering` tool can be run as follows:
 
 ```
-java -cp build/libs/networkanalysis-<version>.jar nl.cwts.networkanalysis.run.RunNetworkClustering
+java -cp build/libs/networkanalysis-<version>.jar run.com.codemutation.leiden.RunNetworkClustering
 ```
 
 The `RunNetworkLayout` tool can be run as follows:
 
 ```
-java -cp build/libs/networkanalysis-<version>.jar nl.cwts.networkanalysis.run.RunNetworkLayout
+java -cp build/libs/networkanalysis-<version>.jar run.com.codemutation.leiden.RunNetworkLayout
 ```
 
 ## References

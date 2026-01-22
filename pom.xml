@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>nl.cwts</groupId>
-  <artifactId>networkanalysis</artifactId>
+  <groupId>com.codemutation</groupId>
+  <artifactId>leiden-cluster</artifactId>
   <version>${revision}</version>
   <packaging>jar</packaging>
 
-  <name>networkanalysis</name>
+  <name>leiden-cluster</name>
   <description>Java package that provides data structures and algorithms for network analysis.</description>
-  <url>https://github.com/CWTSLeiden/networkanalysis</url>
+  <url>https://github.com/NtKrnlCraft/leiden-cluster</url>
 
   <properties>
     <revision>1.3.0-SNAPSHOT</revision>
@@ -38,9 +38,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:CWTSLeiden/networkanalysis.git</connection>
-    <developerConnection>scm:git:git@github.com:CWTSLeiden/networkanalysis.git</developerConnection>
-    <url>https://github.com/CWTSLeiden/networkanalysis</url>
+    <connection>scm:git:git@github.com:NtKrnlCraft/leiden-cluster.git</connection>
+    <developerConnection>scm:git:git@github.com:NtKrnlCraft/leiden-cluster.git</developerConnection>
+    <url>https://github.com/NtKrnlCraft/leiden-cluster</url>
   </scm>
 
   <dependencies>
