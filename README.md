@@ -1,8 +1,8 @@
-# networkanalysis
+# leiden-cluster
 
-[![Build master branch](https://github.com/CWTSLeiden/networkanalysis/workflows/Build%20master%20branch/badge.svg?branch=master)](https://github.com/CWTSLeiden/networkanalysis/actions)
-[![License: MIT](https://badgen.net/github/license/CWTSLeiden/networkanalysis?label=License&color=yellow)](https://github.com/CWTSLeiden/networkanalysis/blob/master/LICENSE)
-[![Latest release](https://badgen.net/github/release/CWTSLeiden/networkanalysis?label=Release)](https://github.com/CWTSLeiden/networkanalysis/releases)
+[![Build master branch](https://github.com/NtKrnlCraft/leiden-cluster/workflows/Build%20master%20branch/badge.svg?branch=master)](https://github.com/NtKrnlCraft/leiden-cluster/actions)
+[![License: MIT](https://badgen.net/github/license/CWTSLeiden/networkanalysis?label=License&color=yellow)](https://github.com/NtKrnlCraft/leiden-cluster/blob/master/LICENSE)
+[![Latest release](https://badgen.net/github/release/CWTSLeiden/networkanalysis?label=Release)](https://github.com/NtKrnlCraft/leiden-cluster/releases)
 [![Maven Central version](https://badgen.net/maven/v/maven-central/nl.cwts/networkanalysis)](https://central.sonatype.com/artifact/nl.cwts/networkanalysis)
 
 ## Introduction
@@ -12,7 +12,7 @@ Currently, the package focuses on clustering (or community detection) and layout
 In particular, the package contains an implementation of the [Leiden algorithm](https://arxiv.org/abs/1810.08473) and the [Louvain algorithm](https://arxiv.org/abs/0803.0476) for network clustering and the [VOS technique](https://arxiv.org/abs/1003.2551) for network layout.
 Only undirected networks are supported.
 
-The networkanalysis package was developed by [Nees Jan van Eck](https://orcid.org/0000-0001-8448-4521), [Vincent Traag](https://orcid.org/0000-0003-3170-3879), and [Ludo Waltman](https://orcid.org/0000-0001-8249-1752) at the [Centre for Science and Technology Studies (CWTS)](https://www.cwts.nl) at [Leiden University](https://www.universiteitleiden.nl/en).
+The leiden-cluster package was developed by [Nees Jan van Eck](https://orcid.org/0000-0001-8448-4521), [Vincent Traag](https://orcid.org/0000-0003-3170-3879), and [Ludo Waltman](https://orcid.org/0000-0001-8249-1752) at the [Centre for Science and Technology Studies (CWTS)](https://www.cwts.nl) at [Leiden University](https://www.universiteitleiden.nl/en).
 
 ## Documentation
 
@@ -39,7 +39,7 @@ implementation group: 'nl.cwts', name: 'networkanalysis', version: '1.3.0'
 
 ## Usage
 
-The networkanalysis package requires Java 8 or higher.
+The leiden-cluster package requires Java 8 or higher.
 The latest version of the package is available as a pre-compiled `jar` on [Maven Central](https://central.sonatype.com/artifact/nl.cwts/networkanalysis) and [GitHub Packages](https://github.com/CWTSLeiden/networkanalysis/packages).
 Instructions for compiling the source code of the package are provided [below](#development-and-deployment).
 
@@ -47,7 +47,7 @@ To run the clustering algorithms, the command-line tool `RunNetworkClustering` i
 The tool can be run as follows:
 
 ```
-java -cp networkanalysis-1.3.0.jar run.com.codemutation.leiden.RunNetworkClustering
+java -cp leiden-cluster-1.3.0.jar run.com.codemutation.leiden.RunNetworkClustering
 ```
 
 If no further arguments are provided, the following usage notice will be displayed:
@@ -111,7 +111,7 @@ To run the layout algorithm, the command-line tool `RunNetworkLayout` is provide
 The tool can be run as follows:
 
 ```
-java -cp networkanalysis-1.3.0.jar run.com.codemutation.leiden.RunNetworkLayout
+java -cp leiden-cluster-1.3.0.jar run.com.codemutation.leiden.RunNetworkLayout
 ```
 
 If no further arguments are provided, the following usage notice will be displayed:
@@ -210,7 +210,7 @@ Nodes must be represented by integer numbers starting from 0.
 Assuming that the edge list has been saved in the file `network.txt`, the `RunNetworkClustering` tool can be run as follows:
 
 ```
-java -cp networkanalysis-1.3.0.jar run.com.codemutation.leiden.RunNetworkClustering -r 0.2 -o clusters.txt network.txt
+java -cp leiden-cluster-1.3.0.jar run.com.codemutation.leiden.RunNetworkClustering -r 0.2 -o clusters.txt network.txt
 ```
 
 In this case, clusters are identified using the Leiden algorithm.
@@ -235,7 +235,7 @@ Cluster 1 includes nodes 3, 4, and 5.
 The `RunNetworkLayout` tool can be run as follows:
 
 ```
-java -cp networkanalysis-1.3.0.jar run.com.codemutation.leiden.RunNetworkLayout -o layout.txt network.txt
+java -cp leiden-cluster-1.3.0.jar run.com.codemutation.leiden.RunNetworkLayout -o layout.txt network.txt
 ```
 
 In this case, the default parameter values are used for the VOS layout technique.
@@ -258,7 +258,7 @@ Furthermore, edge weights can be provided by adding a third column to the file `
 
 ## License
 
-The networkanalysis package is distributed under the [MIT license](LICENSE).
+The leiden-cluster package is distributed under the [MIT license](LICENSE).
 
 ## Issues
 
@@ -266,7 +266,7 @@ If you encounter any issues, please report them using the [issue tracker](https:
 
 ## Contribution
 
-You are welcome to contribute to the development of the networkanalysis package.
+You are welcome to contribute to the development of the leiden-cluster package.
 Please follow the typical GitHub workflow: Fork from this repository and make a pull request to submit your changes.
 Make sure that your pull request has a clear description and that your source code has been properly tested.
 
@@ -277,7 +277,7 @@ The most recent version of the source code, which may be under development, is a
 
 ### Compilation
 
-To compile the source code of the networkanalysis package, a [Java Development Kit](https://jdk.java.net) needs to be installed on your system (version 8 or higher). Having [Gradle](https://www.gradle.org) installed is optional as the [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html) is also included in this repository.
+To compile the source code of the leiden-cluster package, a [Java Development Kit](https://jdk.java.net) needs to be installed on your system (version 8 or higher). Having [Gradle](https://www.gradle.org) installed is optional as the [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html) is also included in this repository.
 
 On Windows, the source code can be compiled as follows:
 
@@ -299,13 +299,13 @@ There are two `main` methods, one in the class `run.com.codemutation.leiden.RunN
 After compiling the source code, the `RunNetworkClustering` tool can be run as follows:
 
 ```
-java -cp build/libs/networkanalysis-<version>.jar run.com.codemutation.leiden.RunNetworkClustering
+java -cp build/libs/leiden-cluster-<version>.jar run.com.codemutation.leiden.RunNetworkClustering
 ```
 
 The `RunNetworkLayout` tool can be run as follows:
 
 ```
-java -cp build/libs/networkanalysis-<version>.jar run.com.codemutation.leiden.RunNetworkLayout
+java -cp build/libs/leiden-cluster-<version>.jar run.com.codemutation.leiden.RunNetworkLayout
 ```
 
 ## References
