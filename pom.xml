@@ -37,12 +37,6 @@
     </license>
   </licenses>
 
-  <scm>
-    <connection>scm:git:git@github.com:NtKrnlCraft/leiden-cluster.git</connection>
-    <developerConnection>scm:git:git@github.com:NtKrnlCraft/leiden-cluster.git</developerConnection>
-    <url>https://github.com/NtKrnlCraft/leiden-cluster</url>
-  </scm>
-
   <dependencies>
     <!-- 对齐 Gradle：fastutil-core -->
     <dependency>
@@ -119,97 +113,6 @@
           <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
       </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>${maven.shade.plugin.version}</version>
-        <executions>
-          <execution>
-            <id>shade</id>
-            <phase>package</phase>
-            <goals><goal>shade</goal></goals>
-            <configuration>
-              <shadedArtifactAttached>false</shadedArtifactAttached>
-
-              <!-- demo 阶段建议关闭，避免生成 dependency-reduced-pom.xml -->
-              <createDependencyReducedPom>false</createDependencyReducedPom>
-
-              <minimizeJar>true</minimizeJar>
-
-              <filters>
-                <filter>
-                  <artifact>*:*</artifact>
-                  <excludes>
-                    <exclude>META-INF/*.SF</exclude>
-                    <exclude>META-INF/*.DSA</exclude>
-                    <exclude>META-INF/*.RSA</exclude>
-                  </excludes>
-                </filter>
-              </filters>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>${maven.deploy.plugin.version}</version>
-      </plugin>
     </plugins>
   </build>
-
-  <profiles>
-    <!-- 发布到 GitHub Packages -->
-    <profile>
-      <id>deploy-github</id>
-      <distributionManagement>
-        <repository>
-          <id>github</id>
-          <name>GitHubPackages</name>
-          <url>https://maven.pkg.github.com/CWTSLeiden/networkanalysis</url>
-        </repository>
-      </distributionManagement>
-    </profile>
-
-    <!-- 发布到 OSSRH（通常还需要签名） -->
-    <profile>
-      <id>deploy-ossrh</id>
-      <distributionManagement>
-        <repository>
-          <id>ossrh</id>
-          <name>OSSRH</name>
-          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-      </distributionManagement>
-    </profile>
-
-    <!-- 只有 release 才签名 -->
-    <profile>
-      <id>release</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>${maven.gpg.plugin.version}</version>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals><goal>sign</goal></goals>
-              </execution>
-            </executions>
-            <configuration>
-              <gpgArguments>
-                <arg>--pinentry-mode</arg>
-                <arg>loopback</arg>
-              </gpgArguments>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>

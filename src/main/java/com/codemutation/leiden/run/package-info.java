@@ -3,7 +3,7 @@
  *
  * <p>
  * The network analysis algorithms are provided by the package {@link
- * nl.cwts.networkanalysis}.
+ * com.codemutation.leiden}.
  * </p>
  *
  * @author Ludo Waltman
